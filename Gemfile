@@ -43,3 +43,5 @@ group :development, :test do
   gem 'spring'
 end
 
+#Bootstrap installation
+gem 'twitter-bootstrap-rails'
