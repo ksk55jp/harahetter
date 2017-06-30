@@ -23,5 +23,8 @@ module Harahetter
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.action_view.field_error_proc = proc { |html_tag, instance| html_tag }
+
+    # Add custom validation path by KsK
+    config.autoload_paths += Dir["#{config.root}/app/validators"]
   end
 end
