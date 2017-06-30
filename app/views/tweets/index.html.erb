@@ -3,15 +3,18 @@
 <% end %>
 <div class="container">
   <div class="wrapper col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-<% @tweets.each do |tweet| %>
-  <div class="row tweet">
-  <p><%= tweet.content%></p>
-  <p>tweeted at <%= tweet.created_at.localtime%></p>
-  <%= link_to "編集する", edit_tweet_path(tweet.id), data: {confirm: '本当に編集していいですか？' }, class: 'btn btn-default btn-sm btn-success' %>
-  <%= link_to "削除する", tweet_path(tweet.id), method: :delete, data: {confirm: '本当に削除していいですか？' }, class: 'btn btn-default btn-sm btn btn-danger'%>
+    <% @tweets.each do |tweet| %>
+      <div class="row tweet">
+        <p><%= tweet.content%></p>
+        <p>tweeted at <%= tweet.created_at.localtime%></p>
+        <%= link_to "編集する", edit_tweet_path(tweet.id), data: {confirm: '本当に編集していいですか？' }, class: 'btn btn-default btn-sm btn-success' %>
+        <%= link_to "削除する", tweet_path(tweet.id), method: :delete, data: {confirm: '本当に削除していいですか？' }, class: 'btn btn-default btn-sm btn btn-danger'%>
+      </div>
+      <br>
+      <br>
+    <% end %>
+    <div id="page-top-btn" class="page-top-btn">
+      <p><a class="move-page-top" id="move-page-top">▲</a></p>
+    </div>
   </div>
-  <br>
-  <br>
-<% end %>
-</div>
 </div>  

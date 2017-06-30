@@ -10,8 +10,8 @@
 	    </ul>
 	  </div>
 	<% end %>
-  <%= f.label :content, class:'form-control' %>
-  <%= f.text_field :content, class:'form-control' %>
+  <%=  f.hidden_field :content %>
+  <p>投稿内容：<%= @tweet.content %></p> 
   <br>
   <%= f.submit '投稿', class: 'btn btn-success btn-block'%>
 <% end %>

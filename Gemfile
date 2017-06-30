@@ -45,3 +45,6 @@ end
 
 #Bootstrap installation
 gem 'twitter-bootstrap-rails'
+
+# For Scroll button
+gem 'jquery-turbolinks'
